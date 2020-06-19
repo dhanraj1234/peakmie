@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": 123,
+    "database": "peakmie-mobile-appdb-dev",
+    "host": "128.199.98.106",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": 123,
+    "database": "peakmie-mobile-appdb-dev",
+    "host": "128.199.98.106",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": 123,
+    "database": "peakmie-mobile-appdb-prod",
+    "host": "128.199.98.106",
+    "dialect": "postgres"
+  }
+}

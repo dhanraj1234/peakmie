@@ -1,0 +1,62 @@
+.tile_count .tile_stats_count:before {
+  border-left: none;
+}
+.custom-counter {
+  border: 1px solid #d6cece !important;
+  margin: 1%;
+  box-shadow: 4px 2px 4px 2px darkgray;
+}
+@media (min-width: 768px) {
+  .tile_count .tile_stats_count span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .tile_count .tile_stats_count {
+    padding-top: 10px;
+  }
+}
+.x_title h2 {
+  line-height: 1.2;
+}
+.external {
+  float: right;
+}
+.external .fa {
+  font-size: 20px;
+}
+.panel_toolbox {
+  min-width: 0;
+}
+input[type=checkbox] {
+  margin: 0;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+  background-color: #428bca;
+}
+.background-grey {
+  background-color: #f9f9f9;
+}
+#referral li,
+#notify li {
+  padding: 1%;
+}
+.zoomContainer { 
+  z-index: 9999;
+}
+.zoomWindow {
+  z-index: 9999;
+}
+#transactions-border-special th {
+  border: 2px solid #ddd;
+}
+.postURL{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.customTd{
+  text-align: center;width: 25%;
+}

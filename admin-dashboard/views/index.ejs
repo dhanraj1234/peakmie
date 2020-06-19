@@ -1,0 +1,51 @@
+<% include partials/header_login.ejs %>
+<section id="banner">
+	<div class="content primary">
+		<header>
+			<h1>Admin Portal</h1>
+		</header>
+	</div>
+	<video src="/images/banner.mp4" muted="" autoplay="" loop="" playsinline=""></video>
+</section>
+
+<section id="loginsection" class="main">
+	<header class="accent1">
+		
+		<form method="post" style="text-align: left;" id="login_form">
+			<div class="row uniform">
+				<div class="3u 12u$(xsmall)"></div>
+				<div class="6u$ 12u$(xsmall)">
+					Username
+					<input type="text" name="username" value="" placeholder="Enter Username" style="color: black;" readonly onfocus="this.removeAttribute('readonly');">
+				</div>
+				<div class="3u 12u$(xsmall)"></div>
+				<div class="6u$ 12u$(xsmall)">
+					Password
+					<input type="password" name="password" value="" placeholder="Enter Password" style="color: black;" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+				</div>
+				<div class="12u$" style="text-align: center;">
+					<ul class="actions">
+						<li><input type="submit" value="Login" class="special"></li>
+						<!-- <li><a href="/forgotPassword"><input type="button" value="Forgot Password" class="special"></a></li> -->
+					</ul>
+				</div>
+			</div>
+		</form>
+
+		<div class="row uniform">
+			<div class="3u 12u$(xsmall)"></div>
+			<div class="6u$ 12u$(xsmall)">
+				<ul style="text-align: left;">
+				<% for (var i = 0; i < errors.length; i++) { %>
+					<li><%= errors[i] %></li>					
+				<% } %>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+</section>
+
+<% include partials/footer_prelogin.ejs %>
+<% include partials/scripts_general.ejs %>
+<% include partials/pageend.ejs %>

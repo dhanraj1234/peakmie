@@ -1,0 +1,69 @@
+ 
+ <% include partials/header.ejs %>
+
+ <!-- page content -->
+ <div class="right_col" role="main" ng-controller="kycController" ng-cloak>
+ 	<!-- Block users  table -->
+ 	<div class="x_panel">
+ 		<div class="x_title">
+ 			<h2>Blocked Users</h2>
+			<ul class="nav navbar-right panel_toolbox">
+				<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<div class="x_content">
+			<div class="row">
+				<div class="col-md-4">
+					Filter By User Name/Email:
+					<form class="form-horizontal">
+						<fieldset>
+							<div class="control-group">
+								<div class="controls">
+									<div class="input-prepend input-group">
+										<span class="add-on input-group-addon"><i class="glyphicon glyphicon-search fa fa-search"></i></span>
+										<input type="text" style="width: 200px" name="user-name-search" id="user-name-search" ng-model="userName" class="form-control" placeholder="Search">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div style="max-height: 500px;overflow-y: auto;">
+				<table id="kyc-request" class="table table-striped table-bordered dt">
+					<thead>
+						<tr>
+							<th></th>
+							<th>User ID</th>
+							<th>User Name</th>
+							<th>Email ID</th>
+							<th>Full Name</th>
+							<th>Signup Date</th>
+							<th>Blocked</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="user in userList | orderBy:'id'| filter: userName ">
+							<td class="text-center" ng-click="changeSelectedUser(user)"><i class="fa fa-search"></i></td>
+							<td>{{user.id}}</td>
+							<td>{{user.username}}</td>
+							<td>{{user.email}}</td>
+							<td>{{user.name}}</td>
+							<td>{{user.createdat | date:'dd-MM-yyyy'}}</td>
+							<td>{{user.isblocked}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>				
+</div>
+<!-- /page content -->
+
+<% include partials/footer.ejs %>
+<% include partials/scripts_general.ejs %>
+<script	type="text/javascript" src="/js/script.js"></script>
+<script	type="text/javascript" src="/js/kycService.js"></script>
+<script type="text/javascript" src="/js/userBlockedController.js"></script>
+<% include partials/pageend.ejs %>

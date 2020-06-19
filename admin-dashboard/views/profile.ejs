@@ -1,0 +1,58 @@
+<% include partials/header.ejs %>
+<div class="right_col" role="main" ng-controller="forgotPasswordController" ng-cloak>
+	<toaster-container toaster-options="{'time-out': 5000}"></toaster-container>
+	<h1 class="text-center">Profile</h1>
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Set New Password</h2>
+			<ul class="nav navbar-right panel_toolbox">
+				<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<div class="x_content">
+			<p class="text-danger">
+				Note:- Password should be atleast 8 characters long and should contain one number,one character(both small and upper case) and one special character.
+			</p>
+			<form  ng-submit="resetPasswordProfile()">
+				<div class="form-group row">
+					<div class="col-md-3 col-xs-12"></div>
+					<label for="oldPassword" class="col-md-3 col-form-label col-xs-12">Enter Old Password</label>
+					<div class="col-md-3 col-xs-12">
+						<input type="password" class="form-control" id="oldPassword" placeholder="Enter Old Password" ng-model="oldPassword" required>
+					</div>
+					<div class="col-md-3 col-xs-12 "></div>
+				</div>
+				<div class="form-group row">
+					<div class="col-md-3 col-xs-12"></div>
+					<label for="newPassword" class="col-md-3 col-form-label col-xs-12">Enter New Password</label>
+					<div class="col-md-3 col-xs-12">
+						<input type="password" class="form-control" id="newPassword" placeholder="Enter New Password" ng-model="password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$">
+					</div>
+					<div class="col-md-3 col-xs-12"></div>
+				</div>
+				<div class="form-group row">
+					<div class="col-md-3 col-xs-12"></div>
+					<label for="confirmPassword" class="col-md-3 col-form-label col-xs-12">Re-Enter New Password</label>
+					<div class="col-md-3 col-xs-12">
+						<input type="password" class="form-control" id="confirmPassword" placeholder="Re- Enter New Password" ng-model="confirmPassword" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$">
+					</div>
+					<div class="col-md-3 col-xs-12"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-xs-12"></div>
+					<ul class="actions col-md-4 text-center col-xs-12">
+						<input type="submit" value="Submit" class="special btn btn-primary" style="margin-top: 1rem">
+						<br> 
+					</ul>
+				</div>
+			</form>
+		</div>
+	</div>	
+</div>
+<% include partials/footer.ejs %>
+<% include partials/scripts_general.ejs %>
+<script	type="text/javascript" src="/js/forgotPasswordService.js"></script>
+<script	type="text/javascript" src="/js/forgotPasswordController.js"></script>
+<% include partials/pageend.ejs %>

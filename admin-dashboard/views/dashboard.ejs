@@ -1,0 +1,55 @@
+<% include partials/header.ejs %>
+
+<!-- page content -->
+<div class="right_col" role="main" ng-controller="dashboardController" ng-cloak>
+	<!-- top tiles -->
+	<div class="x_panel">
+		<div class="x_title">
+			<h2>Dashboard Stats</h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="row tile_count">
+			<div class="custom-counter col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+				<div class="count green" ng-cloak>{{totalUsers | number}}
+					<span class="external">
+						<a href="/users"><i class="fa fa-external-link"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="custom-counter col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-question-circle"></i> Total Active Users</span>
+				<div class="count green" ng-cloak>{{activeUsersCount | number}}
+					<span class="external">
+						<a href="/active_request"><i class="fa fa-external-link"></i></a>
+					</span>
+				</div>
+			</div> 
+			<div class="custom-counter col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-question-circle"></i> Total Blocked Users</span>
+				<div class="count green" ng-cloak>{{blockedUsersCount | number}}
+					<span class="external">
+						<a href="/blocked_request"><i class="fa fa-external-link"></i></a>
+					</span>
+				</div>
+			</div>
+			<div class="custom-counter col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-question-circle"></i> Total Reported Posts</span>
+				<div class="count green" ng-cloak>{{totalReportedPosts | number}}
+					<span class="external">
+						<a href="/reported_posts"><i class="fa fa-external-link"></i></a>
+					</span>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	<!-- /top tiles -->					
+</div>
+<!-- /page content -->
+			
+<% include partials/footer.ejs %>
+<% include partials/scripts_general.ejs %>
+<script type="text/javascript" src="/js/dashboardService.js"></script>
+<script type="text/javascript" src="/js/dashboardController.js"></script>
+<% include partials/pageend.ejs %>

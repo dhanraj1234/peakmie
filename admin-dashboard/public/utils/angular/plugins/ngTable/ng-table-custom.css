@@ -1,0 +1,263 @@
+.ng-table th {
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #F7F7F7;
+}
+.ng-table th.sortable {
+  cursor: pointer;
+}
+.ng-table th.sortable div {
+  padding-right: 18px;
+  position: relative;
+}
+.ng-table th.sortable div:after,
+.ng-table th.sortable div:before {
+  content: "";
+  border-width: 0 4px 4px;
+  border-style: solid;
+  border-color: #000 transparent;
+  visibility: visible;
+  right: 8px;
+  top: 50%;
+  position: absolute;
+  opacity: .3;
+  margin-top: -4px;
+}
+.ng-table th.sortable div:before {
+  margin-top: 2px;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000;
+}
+.ng-table th.sortable div:hover:after,
+.ng-table th.sortable div:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.ng-table th.sortable.sort-desc,
+.ng-table th.sortable.sort-asc {
+  background-color: rgba(141, 192, 219, 0.25);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.ng-table th.sortable.sort-desc div:after,
+.ng-table th.sortable.sort-asc div:after {
+  margin-top: -2px;
+}
+.ng-table th.sortable.sort-desc div:before,
+.ng-table th.sortable.sort-asc div:before {
+  visibility: hidden;
+}
+.ng-table th.sortable.sort-asc div:after,
+.ng-table th.sortable.sort-asc div:hover:after {
+  visibility: visible;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ng-table th.sortable.sort-desc div:after {
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000;
+  visibility: visible;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.ng-table th.filter .input-filter {
+  margin: 0;
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ng-table + .pagination {
+  margin-top: 0;
+}
+
+table.ng-table {
+	margin-bottom:0px;	
+}
+
+.ng-table td label.responsive-col-heading {
+	display:none;
+}
+
+.gridActions span{
+    margin:4px;
+    cursor:pointer;
+}
+
+.responsivePager {
+	background-color: #f9f9f9;
+    height:32px;
+    border:1px solid #ddd;
+    margin-bottom:50px;	
+}
+
+.pagingSizeControl {
+   	margin:5px;
+}
+
+#pagingDropdown {
+    height: initial;
+    width: initial;
+}
+
+.pagination {
+   	float:left;
+   	margin:3px !important;
+}
+        
+.pagingGoto {
+  	padding:0px 5px !important;
+   	color:#333 !important;
+}
+        
+.pagingGoto input{
+   	width:50px; 
+   	height: 22px; 
+  	padding-left:2px;
+}
+        
+.pagingRecordStats {
+   	text-align:center;
+   	margin: 5px;
+	margin-top: 7px;
+}
+
+.pagingFirstPage {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 8.7px 5px 0;
+  border-color: transparent #4d4d4d transparent transparent;
+  margin-left: 2px;
+}
+.pagingNextPage {
+  margin-left: 1px;
+}
+.pagingPrevPage {
+  margin-left: 0;
+}
+.pagingLastPage {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 8.7px;
+  border-color: transparent transparent transparent #4d4d4d;
+  margin-left: -1px;
+}
+.pagingFirstBar {
+  width: 10px;
+  border-left: 2px solid #4d4d4d;
+  margin-top: -6px;
+  height: 12px;
+  margin-left: -3px;
+}
+.pagingLastBar {
+  width: 10px;
+  border-left: 2px solid #4d4d4d;
+  margin-top: -6px;
+  height: 12px;
+  margin-left: 1px;
+}
+
+
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	
+	.responsivePager .pagingSizeControl,
+	.responsivePager .pagingGoto {
+		display:none !important;
+	}
+	        
+	.responsivePager .pagingLast {
+		float:right !important;
+		margin-right:-30px;;
+	}
+	
+	.responsivePager .pagingNext{
+		float:right !important;
+		right:32px;
+	} 
+	
+	.responsivePager .pagination {
+	 	float:right;
+		width:98%;
+	}
+		
+	.responsivePager .pagingRecordStats {
+		margin-top:-24px;
+		float:left !important;
+		left:40%;
+		position:relative;
+	}
+		
+	.responsiveTable tr td {
+	   	border:0px none !important;
+	   	padding:3px !important;
+	}
+	        
+	/* Force table to not be like tables anymore */
+	.responsiveTable, .responsiveTable thead, .responsiveTable tbody,
+	.responsiveTable th, .responsiveTable td, .responsiveTable tr { 
+		display: block; 
+	}
+			
+	.responsiveTable thead tr { 
+		display:none;
+	}
+			
+	.responsiveTable tr {
+		border: 1px solid #ccc;
+	}
+			
+	.responsiveTable td label.responsive-col-heading{
+		display: inline-table;
+		float:left;
+	}
+			
+	.responsiveTable td div.col-value{
+		width:100%;
+		padding-left:40%;
+		min-height:20px;
+	}
+	
+	.gridActions.right {
+		float:none;	
+	}
+
+}
+	
+	/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	body { 
+		padding: 0; 
+		margin: 0; 
+		width: 320px; }
+	}
+		
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	body { 
+		width: 495px; 
+	}
+}

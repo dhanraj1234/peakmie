@@ -1,0 +1,59 @@
+<% include partials/header_prelogin.ejs %>
+
+<section id="banner">
+    <div class="content primary">
+        <header>
+            <h1>Register</h1>
+        </header>
+    </div>
+    <div class="content secondary">
+        <div class="inner">
+            <div class="row">
+                <div class="12u">
+                    <h3>Choose your username and password</h3>
+                    <form method="post" style="text-align: left;" id="register_form">
+                        <div class="row uniform">
+                            <div class="4u 12u$(xsmall)"></div>
+                            <div class="4u 12u$(xsmall)">
+                                <div class="row uniform">
+                                    <div class="12u$ 12u$(xsmall)">
+                                        Username
+                                        <input type="text" name="username" value="" placeholder="Enter Username" style="color: black;" readonly onfocus="this.removeAttribute('readonly');">
+                                    </div>
+                                    <div class="12u$ 12u$(xsmall)">
+                                        Password
+                                        <input type="password" name="password" value="" placeholder="Enter Password" style="color: black;" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+                                    </div>
+                                    <div class="12u$ 12u$(xsmall)">
+                                        Confirm Password
+                                        <input type="password" name="confirmPassword" value="" placeholder="Enter Password Again" style="color: black;" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+                                    </div>
+                                    <div class="12u$ 12u$(xsmall)">
+                                        <div class="g-recaptcha" data-sitekey="6LeiPkAUAAAAADg1mF4lvvPN1ekmr5KKTf7dG8hV"></div>
+                                    </div>
+                                    <div class="12u$" style="text-align: center;">
+                                        <ul class="actions">
+                                            <li><input type="submit" value="Continue" class="special"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <% for (var i = 0; i < errors.length; i++) { %>
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <%= errors[i] %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <video src="images/banner.mp4" muted="" autoplay="" loop="" playsinline=""></video>
+</section>
+
+<% include partials/footer_prelogin.ejs %>
+<% include partials/scripts_prelogin.ejs %>
+<% include partials/pageend.ejs %>
