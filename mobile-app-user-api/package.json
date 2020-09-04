@@ -64,7 +64,7 @@
 		"pg": "^6.4.1",
 		"push-notification": "^0.2.5",
 		"request": "^2.83.0",
-		"sequelize": "^4.38.0",
+		"sequelize": "^5.15.1",
 		"sequelize-cli": "^4.0.0",
 		"serve-favicon": "~2.3.0",
 		"string-template": "^1.0.0",
