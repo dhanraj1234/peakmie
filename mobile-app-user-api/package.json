@@ -54,7 +54,7 @@
 		"node-fetch": "^2.2.0",
 		"node-gcm": "^1.0.2",
 		"node-pushnotifications": "^1.1.6",
-		"nodemailer": "^4.6.5",
+		"nodemailer": "^6.4.16",
 		"nodemon": "^1.13.3",
 		"npm": "^5.8.0",
 		"passport": "^0.4.0",
